@@ -1,0 +1,127 @@
+/*-----------------------*/
+/*         body          */
+/*-----------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url("Extra/blackjackpic.jpg"); 
+} 
+
+.Biggrid {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.5fr 0.5fr ;
+    gap: 25px;
+    height: 92vh;
+}
+
+.containercard1 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+.containercard2 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.containercard3 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+.containercard4 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
+
+.containercardplayer1 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.containercardplayer2 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.containercardplayer3 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+.containercardplayer4 {
+    width: 100%;
+    display: grid;
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+
+/*-----------------------*/
+/* Bar on top of website */
+/*-----------------------*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --header-height: 55px;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#21571c, #406e15);
+    box-shadow: 0 1px 10px 0 rgb(185, 255, 183);
+    height: var(--header-height);
+  }
+
+.header h1 {
+   color: rgb(255, 255, 255);
+   top: 0;
+   margin-left: 3vmax;
+   text-transform:capitalize;
+   font-size: 200%;
+}
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+ 
+ a {
+     color: rgb(252, 252, 252);
+     display: inline-block;
+     text-decoration: none;
+     background-color:#127e12;
+     padding: 15px;
+     border-bottom-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     margin-right: 1vmax;
+     font-size: large;
+ }
+ a:hover {
+     color: rgb(255, 255, 255);
+     background-color: #11c046;
+ }
