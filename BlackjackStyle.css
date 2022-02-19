@@ -21,55 +21,68 @@ body{
 }
 
 .containercard1 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 2;
     grid-row-start: 2;
 }
 .containercard2 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 3;
     grid-row-start: 2;
 }
 .containercard3 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 4;
     grid-row-start: 2;
 }
 .containercard4 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 5;
     grid-row-start: 2;
 }
-
 .containercardplayer1 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 2;
     grid-row-start: 3;
 }
 .containercardplayer2 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 3;
     grid-row-start: 3;
 }
 .containercardplayer3 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 4;
     grid-row-start: 3;
 }
 .containercardplayer4 {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-column-start: 5;
     grid-row-start: 3;
 }
 
+.ButtonDeal {
+    width: 100%;
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
 
 /*-----------------------*/
 /* Bar on top of website */
