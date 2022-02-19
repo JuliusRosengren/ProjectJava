@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="DiceStyle.css">
+    <script defer src="Dice.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>
+            Basic Gambling Site
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="">Blackjack</a>
+            <a href="">Roulette</a>
+            <a href="">Slot</a>           
+            <a href="Dice.html">Dice</a>
+        </nav>
+    </header>
+    <div class="BigGrid">
+    <div class="container01">
+        <div class="dice-wrapper">
+            <img class="shake"  id="die-1">
+            <img class="shake" id="die-2">
+        </div>
+        <p id="total"></p>
+        <button onclick="roll()">ROLL THE DICE</button>
+    </div>
+
+    <div class="container02">
+        <div class="box-wrapper">
+            <h1>
+                <u>Statistics:</u>
+            </h1>
+            <div class="Money">Money: 100 $</div>
+            <div class="TimesWon">TimesWon: 0</div>
+            <div class="TimesLost">TimesLost: 0</div>
+        </div>
+    </div>
+</div>
+
+<!--    
+     <audio id="myAudio" controls cautoplay>  
+     <source src="Extra/Beach.mp3" type="audio/mpeg">
+     </audio>      
+ -->
+</body>
+</html>

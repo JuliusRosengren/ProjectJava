@@ -1,0 +1,168 @@
+/*-----------------------*/
+/*   Dice box in middle  */
+/*-----------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url("Extra/Beach-tree.jpg"); 
+} 
+
+.BigGrid {
+    display: grid;
+    grid-template-columns: 1fr 0.57fr 1fr;
+    grid-template-rows: 1.17fr 2fr 1.4fr;
+    gap: 50px;
+    height: 92vh;
+}
+
+ .container01{
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background: linear-gradient(#e92e3d, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+.dice-wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.container01 p{
+    color: black;
+    font-size: 16px;
+    margin: 30px 0;
+    font-weight: 500;
+}
+button{
+    background-color: #e92e3d;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 15px 0;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shake{
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+} 
+
+/*-----------------------*/
+/*    Box to the left    */
+/*-----------------------*/
+
+.container02{
+    width: 50%;
+    padding: 50px;
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background: linear-gradient(#e92e3d, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
+.Money,
+.TimesWon,
+.TimesLost {
+    margin-top: 1.5rem;
+}
+
+.box-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container02 p{
+    color: black;
+    font-size: 16px;
+    margin: 30px 0;
+    font-weight: 500;
+}
+
+/*-----------------------*/
+/* Bar on top of website */
+/*-----------------------*/
+
+ *, *::before, *::after {
+     box-sizing: border-box;
+ }
+
+ :root {
+     --header-height: 55px;
+   }
+
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: sticky;
+     top: 0;
+     background: linear-gradient(#9b0814, #ff4039);
+     box-shadow: 0 1px 10px 0 rgb(255, 183, 183);
+     height: var(--header-height);
+   }
+
+ .header h1 {
+    color: rgb(255, 255, 255);
+    top: 0;
+    margin-left: 3vmax;
+    text-transform:capitalize;
+    font-size: 200%;
+ }
+
+   nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+ }
+  
+  a {
+      color: rgb(252, 252, 252);
+      display: inline-block;
+      text-decoration: none;
+      background-color:#c52121;
+      padding: 15px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-right: 1vmax;
+      font-size: large;
+  }
+  a:hover {
+      color: rgb(255, 255, 255);
+      background-color: #a01414;
+  }
