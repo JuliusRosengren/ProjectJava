@@ -22,27 +22,35 @@
         </nav>
     </header>
 <div class="BodyGrid">
-<div id="app">
-    <div class="doors">
-      <div class="door">
-        <div class="boxes">
+    <div class="container01">
+        <div class="slot-wrapper">
+            <img class="shake" id="die-1">
+            <img class="shake" id="die-2">
+            <img class="shake" id="die-3">
         </div>
-      </div>
-      <div class="door">
-        <div class="boxes">
-        </div>
-      </div>
-      <div class="door">
-        <div class="boxes">
-        </div>
-      </div>
+        <p id="total"></p>
+        <button onclick="roll()">Click!</button>
     </div>
-    <div class="buttons">
-      <button id="spinner">Spin</button>
-      <button id="reseter">Reset</button>
-    </div>
-    <p class="info"></p>
-  </div>
+  <div class="container02">
+    <div class="box-wrapper">
+        <h1>
+            <u>Statistics:</u>
+        </h1>
+        <div class="Money">Money: 100 $</div>
+        <div class="TimesWon">TimesWon: 0</div>
+        <div class="TimesLost">TimesLost: 0</div>
+    </div> 
+</div>
+<div class="container03">
+    <div class="box-wrapper2">
+        <h1>
+            <u>Values:</u>
+        </h1>
+        <p>Win:   1000x</p>
+        <p>Semi-Win: 10x</p>
+        <p>Lose:      0.1x</p>
+    </div> 
+</div>
   </div>
   
 </body>

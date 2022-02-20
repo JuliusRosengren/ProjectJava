@@ -31,7 +31,7 @@ function roll(){
         document.querySelector("#total").innerHTML = "Your roll is " + ( (dieOneValue +1) + (dieTwoValue + 1) );
 
           if((dieOneValue +1) + (dieTwoValue + 1) >= 6) {
-              Money *= 2;
+              Money *= 4;
               TimesWon += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesWonText.innerHTML = `TimesWon: ${TimesWon}`

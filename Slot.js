@@ -1,102 +1,73 @@
-(function () {
-    "use strict";
-  
-    const items = [
-      "🍭",
-      "❌",
-      "⛄️",
-      "🦄",
-      "🍌",
-      "💩",
-      "👻",
-      "😻",
-      "💵",
-      "🤡",
-      "🦖",
-      "🍎"
-    ];
-    document.querySelector(".info").textContent = items.join(" ");
-  
-    const doors = document.querySelectorAll(".door");
-    document.querySelector("#spinner").addEventListener("click", spin);
-    document.querySelector("#reseter").addEventListener("click", init);
-  
-    async function spin() {
-      init(false, 1, 2);
-      for (const door of doors) {
-        const boxes = door.querySelector(".boxes");
-        const duration = parseInt(boxes.style.transitionDuration);
-        boxes.style.transform = "translateY(0)";
-        await new Promise((resolve) => setTimeout(resolve, duration * 100));
-      }
-    }
-  
-    function init(firstInit = true, groups = 1, duration = 1) {
-      for (const door of doors) {
-        if (firstInit) {
-          door.dataset.spinned = "0";
-        } else if (door.dataset.spinned === "1") {
-          return;
-        }
-  
-        const boxes = door.querySelector(".boxes");
-        const boxesClone = boxes.cloneNode(false);
-  
-        const pool = ["❓"];
-        if (!firstInit) {
-          const arr = [];
-          for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
-            arr.push(...items);
-          }
-          pool.push(...shuffle(arr));
-  
-          boxesClone.addEventListener(
-            "transitionstart",
-            function () {
-              door.dataset.spinned = "1";
-              this.querySelectorAll(".box").forEach((box) => {
-                box.style.filter = "blur(1px)";
-              });
-            },
-            { once: true }
-          );
-  
-          boxesClone.addEventListener(
-            "transitionend",
-            function () {
-              this.querySelectorAll(".box").forEach((box, index) => {
-                box.style.filter = "blur(0)";
-                if (index > 0) this.removeChild(box);
-              });
-            },
-            { once: true }
-          );
-        }
+let Money = 100;
+let TimesWon = 0;
+let TimesLost = 0; 
+
+let MoneyText = document.querySelector(".Money");
+let TimesWonText = document.querySelector(".TimesWon")
+let TimesLostText = document.querySelector(".TimesLost")
+
+
+let images = ["Extra/Orange.png",
+"Extra/Apple.png",
+"Extra/Pear.png",
+"Extra/Bar.png",
+"Extra/Cherry.png",
+"Extra/Coin.png"];
+let dice = document.querySelectorAll("img");
+
+function roll(){
+    dice.forEach((die) => {
+        die.classList.add("shake");
+    });
+    setTimeout(function(){
+        dice.forEach(function(die){
+            die.classList.remove("shake");
+        });
+        let dieOneValue = Math.floor(Math.random()*6);
+        let dieTwoValue = Math.floor(Math.random()*6);
+        let dieThreeValue = Math.floor(Math.random()*6);
+        console.log(dieOneValue,dieTwoValue);
+        document.querySelector("#die-1").setAttribute("src", images[dieOneValue]);
+        document.querySelector("#die-2").setAttribute("src", images[dieTwoValue]);
+        document.querySelector("#die-3").setAttribute("src", images[dieThreeValue]);
         
-        for (let i = pool.length - 1; i >= 0; i--) {
-          const box = document.createElement("div");
-          box.classList.add("box");
-          box.style.width = door.clientWidth + "px";
-          box.style.height = door.clientHeight + "px";
-          box.textContent = pool[i];
-          boxesClone.appendChild(box);
+          if((dieOneValue + 1) == (dieTwoValue + 1) == (dieThreeValue + 1)) {
+              document.querySelector("#total").innerHTML = "Win";
+              Money *= 1000;
+              TimesWon += 1;
+              MoneyText.innerHTML = `Money: ${Money} $`; 
+              TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+          }
+          else if((dieOneValue + 1) == (dieTwoValue + 1)) {
+            document.querySelector("#total").innerHTML = "Semi-Win";
+            Money *= 10;
+            TimesWon += 1;
+            MoneyText.innerHTML = `Money: ${Money} $`; 
+            TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
         }
-        boxesClone.style.transitionDuration = `${duration > 0 ? duration : 1}s`;
-        boxesClone.style.transform = `translateY(-${
-          door.clientHeight * (pool.length - 1)
-        }px)`;
-        door.replaceChild(boxesClone, boxes);
-      }
-    }
-  
-    function shuffle([...arr]) {
-      let m = arr.length;
-      while (m) {
-        const i = Math.floor(Math.random() * m--);
-        [arr[m], arr[i]] = [arr[i], arr[m]];
-      }
-      return arr;
-    }
-  
-    init();
-  })();
+        else if((dieTwoValue + 1) == (dieThreeValue + 1)) {
+            document.querySelector("#total").innerHTML = "Semi-Win";
+            Money *= 5;
+            TimesWon += 1;
+            MoneyText.innerHTML = `Money: ${Money} $`; 
+            TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+        }
+        else if((dieOneValue + 1) == (dieThreeValue + 1)) {
+            document.querySelector("#total").innerHTML = "Semi-Win";
+            Money *= 5;
+            TimesWon += 1;
+            MoneyText.innerHTML = `Money: ${Money} $`; 
+            TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+        }
+          else {
+              document.querySelector("#total").innerHTML = "Lose";
+              Money *= 0.1;
+              TimesLost += 1;
+              MoneyText.innerHTML = `Money: ${Money} $`; 
+              TimesLostText.innerHTML = `TimesLost: ${TimesLost}` 
+          }
+    },
+    1500
+    );
+}
+roll();
