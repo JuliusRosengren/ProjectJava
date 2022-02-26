@@ -9,6 +9,7 @@
 }
 body{
     height: 100vh;
+    background-color: rgb(120, 206, 247);
 } 
 
 .BigGrid {
@@ -49,14 +50,15 @@ body{
     font-weight: 500;
 }
 button{
-    background-color: #e92e3d;
+    background-color:#3c93e4;
     border: none;
     outline: none;
-    color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 15px 0;
     width: 150px;
     letter-spacing: 1px;
     border-radius: 5px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -88,23 +90,27 @@ button{
 
 .container02{
     width: 100%;
+    height: 70%;
     display: grid;
     grid-column-start: 1;
     grid-row-start: 2;
-    background: linear-gradient(#e92e3d, #ff6e6a);
+    background: linear-gradient(rgb(93, 198, 247), #289ce9);
     box-shadow: 0 15px 25px rgba(50,50,50,0.15);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Poppins",sans-serif;
-    padding: 10px;
     margin: 5px;
 }
 
 .Money,
 .TimesWon,
-.TimesLost {
+.TimesLost,
+.Amount,
+.Odd,
+.Even,
+.Zero  {
     margin-top: 1.5rem;
 }
 
@@ -146,13 +152,13 @@ button{
     align-items: center;
     position: sticky;
     top: 0;
-    background: linear-gradient(#383838, #3d3d3d);
-    box-shadow: 0 1px 10px 0 rgb(255, 255, 255);
+    background: linear-gradient(rgb(120, 206, 247), #289ce9);
+    box-shadow: 0 1px 10px 0 rgb(41, 119, 209);
     height: var(--header-height);
   }
 
 .header h1 {
-   color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
    top: 0;
    margin-left: 3vmax;
    text-transform:capitalize;
@@ -166,10 +172,10 @@ button{
 }
  
  a {
-     color: rgb(252, 252, 252);
+     color: rgb(0, 0, 0);
      display: inline-block;
      text-decoration: none;
-     background-color:#686868;
+     background-color:#3c93e4;
      padding: 15px;
      border-bottom-right-radius: 10px;
      border-bottom-left-radius: 10px;
@@ -177,6 +183,6 @@ button{
      font-size: large;
  }
  a:hover {
-     color: rgb(255, 255, 255);
-     background-color: #8d8d8d;
+     color: rgb(0, 0, 0);
+     background-color: #0868b6;
  }
