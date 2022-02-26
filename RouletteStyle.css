@@ -1,0 +1,182 @@
+/*-----------------------*/
+/*  Wheel box in middle  */
+/*-----------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+} 
+
+.BigGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 92vh;
+}
+
+ .container01{
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+.wheel-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Wheel01 {
+    display: flex;
+    align-self: center;
+}
+
+.container01 p{
+    color: black;
+    font-size: 20px;
+    margin: 30px 0;
+    font-weight: 500;
+}
+button{
+    background-color: #e92e3d;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 15px 0;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shake{
+    animation: shake 0.1s infinite;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(360deg);
+    }
+    25%{
+        transform: rotate(-360deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    75%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+/*-----------------------*/
+/*    Box to the left    */
+/*-----------------------*/
+
+.container02{
+    width: 100%;
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    background: linear-gradient(#e92e3d, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
+.Money,
+.TimesWon,
+.TimesLost {
+    margin-top: 1.5rem;
+}
+
+.container02 h1 {
+    margin-top: 1rem;
+}
+
+.box-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container02 p{
+    color: black;
+    font-size: 16px;
+    margin: 30px 0;
+    font-weight: 500;
+}
+
+/*-----------------------*/
+/* Bar on top of website */
+/*-----------------------*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-height: 55px;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#383838, #3d3d3d);
+    box-shadow: 0 1px 10px 0 rgb(255, 255, 255);
+    height: var(--header-height);
+  }
+
+.header h1 {
+   color: rgb(255, 255, 255);
+   top: 0;
+   margin-left: 3vmax;
+   text-transform:capitalize;
+   font-size: 200%;
+}
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+ 
+ a {
+     color: rgb(252, 252, 252);
+     display: inline-block;
+     text-decoration: none;
+     background-color:#686868;
+     padding: 15px;
+     border-bottom-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     margin-right: 1vmax;
+     font-size: large;
+ }
+ a:hover {
+     color: rgb(255, 255, 255);
+     background-color: #8d8d8d;
+ }
