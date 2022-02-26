@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="BlackjackStyle.css">
-    <script defer src="Blackjack.js"></script>
 </head>
 <body>
     <header class="header">
@@ -21,33 +20,34 @@
             <a href="Dice.html">Dice</a>
         </nav>
     </header>
-    <div class="Biggrid">
-        <div class="containercard1">
-            <img src="Extra/k2.webp" id="card1">
+    <div id="table">
+        <div id="dealer-score" class="score">Dealer score: <span>0</span></div>
+        <div id="deck">
+          <div class="back"></div>
         </div>
-        <div class="containercard2">
-            <img src="Extra/k3.webp" id="card2">
+        <div class="container" id="dealer">
         </div>
-        <div class="containercard3">
-            <img src="Extra/k4.webp" id="card3">
+  
+        <div class="border-line"></div>
+  
+        <div id="player-score" class="score">Your score: <span>0</span></div>
+        <div class="container" id="player">
         </div>
-        <div class="containercard4">
-            <img src="Extra/k5.webp" id="card4">
-        </div>
-        <div class="containercardplayer1">
-            <img src="Extra/k5.webp" id="cardP1">
-        </div>
-        <div class="containercardplayer2">
-            <img src="Extra/k5.webp" id="cardP2">
-        </div>
-        <div class="containercardplayer3">
-            <img src="Extra/k5.webp" id="cardP3">
-        </div>
-        <div class="containercardplayer4">
-            <img src="Extra/k5.webp" id="cardP4">
-        </div>
+      </div>
+  
+      <div id="panel">
+        <div id="status">Press Deal to start game</div>
+  
+        <button id="deal" class="blue" type="button">DEAL</button>
+        <button id="hit" class="green" type="button" disabled>HIT</button>
+        <button id="stand" class="red" type="button" disabled>STAND</button>
+  
+      </div>
 
-        <button class="ButtonDeal" onclick="deal()">ROLL THE DICE</button>
-    </div>
+      <script type="text/javascript" src="Blackjack.js"></script>
+      <script type="text/javascript">
+        //initialise the game
+        BlackjackJS.init();
+      </script>
 </body>
 </html>
