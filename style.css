@@ -6,6 +6,8 @@
 
  *, *::before, *::after {
      box-sizing: border-box;
+     padding: 0;
+     margin: 0;
  }
 
  :root {
@@ -28,7 +30,7 @@
     top: 0;
     margin-left: 3vmax;
     text-transform:capitalize;
-    font-size: 200%;
+    font-size: 1.8vmax;
  }
 
    nav {
@@ -42,11 +44,11 @@
       display: inline-block;
       text-decoration: none;
       background-color:#464444;
-      padding: 15px;
+      padding: 1.12vmax;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       margin-right: 1vmax;
-      font-size: large;
+      font-size: 1.2vmax;
   }
   a:hover {
       color: rgb(238, 255, 0);

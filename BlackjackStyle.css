@@ -209,7 +209,7 @@ html {
 
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -282,7 +282,7 @@ table {
    top: 0;
    margin-left: 3vmax;
    text-transform:capitalize;
-   font-size: 200%;
+   font-size: 1.8vmax;
 }
 
   nav {
@@ -296,11 +296,11 @@ table {
      display: inline-block;
      text-decoration: none;
      background-color:#127e12;
-     padding: 15px;
+     padding: 1.12vmax;
      border-bottom-right-radius: 10px;
      border-bottom-left-radius: 10px;
      margin-right: 1vmax;
-     font-size: large;
+     font-size: 1.2vmax;
  }
  a:hover {
      color: rgb(255, 255, 255);

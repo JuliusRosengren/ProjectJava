@@ -142,7 +142,7 @@ button{
     top: 0;
     margin-left: 3vmax;
     text-transform:capitalize;
-    font-size: 200%;
+    font-size: 1.8vmax;
  }
 
    nav {
@@ -156,11 +156,11 @@ button{
       display: inline-block;
       text-decoration: none;
       background-color:#c52121;
-      padding: 15px;
+      padding: 1.12vmax;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       margin-right: 1vmax;
-      font-size: large;
+      font-size: 1.2vmax;
   }
   a:hover {
       color: rgb(255, 255, 255);

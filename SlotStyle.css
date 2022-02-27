@@ -17,12 +17,15 @@ body{
     grid-template-columns:  0.5fr 2fr 0.5fr ;
     grid-template-rows: 1fr 3fr 1fr;
     gap: 25px;
-    height: 92vh;
+    height: auto;
+    width: auto;
+    height: auto;
 }
 
 .container01{
-    width: 100%;
-    padding: 50px;
+    height: auto;
+    width: auto;
+    padding: 2vw;
     display: grid;
     grid-column-start: 2;
     grid-row-start: 2;
@@ -61,7 +64,9 @@ button{
 #die-1, 
 #die-2,
 #die-3 {
-    margin: 10px;
+    transform: scale(75%);
+    height: auto;
+    width: auto;
 }
 
 .shake{
@@ -91,49 +96,9 @@ button{
 /*-----------------------*/
 
 .container02{
-    width: 100%;
-    padding: 50px;
-    display: grid;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    background: linear-gradient(#5a5a5a, #464545);
-    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Poppins",sans-serif;
-    padding: 10px;
-    margin: 5px;
-}
-
-.TimesWon,
-.TimesLost {
-    margin-top: 1.5rem;
-}
-
-.box-wrapper{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: #d1d1d1;
-}
-
-.container02 p{
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    margin: 30px 0;
-    font-weight: 500;
-}
-
-/*------------------------*/
-/* Box to the left bottom */
-/*------------------------*/
-
-.container03{
-    width: 100%;
-    padding: 50px;
+    height: auto;
+    width: auto;
+    padding: 2vmax;
     display: grid;
     grid-column-start: 1;
     grid-row-start: 2;
@@ -148,7 +113,15 @@ button{
     margin: 5px;
 }
 
-.box-wrapper2{
+.TimesWon {
+    margin-top: 1.5rem;
+}
+.TimesLost {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.box-wrapper{
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -156,8 +129,8 @@ button{
     color: #d1d1d1;
 }
 
-.container03 p{
-    color: rgb(192, 192, 192);
+.container02 p{
+    color: rgb(255, 255, 255);
     font-size: 16px;
     margin: 10px 0;
     font-weight: 500;
@@ -193,7 +166,7 @@ button{
    top: 0;
    margin-left: 3vmax;
    text-transform:capitalize;
-   font-size: 200%;
+   font-size: 1.8vmax;
 }
 
   nav {
@@ -207,11 +180,11 @@ button{
      display: inline-block;
      text-decoration: none;
      background-color:#686868;
-     padding: 15px;
+     padding: 1.12vmax;
      border-bottom-right-radius: 10px;
      border-bottom-left-radius: 10px;
      margin-right: 1vmax;
-     font-size: large;
+     font-size: 1.2vmax;
  }
  a:hover {
      color: rgb(255, 255, 255);
