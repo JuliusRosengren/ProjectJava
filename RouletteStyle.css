@@ -167,7 +167,7 @@ button{
    font-size: 1.8vmax;
 }
 
-  nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
