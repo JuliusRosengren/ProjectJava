@@ -127,18 +127,59 @@ html {
   }
   
   #panel {
-    text-align: center;
     background-color: #40434E;
     border-top: 1px solid #070707;
-    position: absolute;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr  0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
     bottom: 0;
     width: 100%;
     padding-top: 10px;
+    
   }
+
+
+.Money {    
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: grid;
+  justify-content: center;
+  margin-top: 5%;
+  color: #55ee95;
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+.TimesWon {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  display: grid;
+  justify-content: center;
+  margin-top: 15%;
+  color: #3cc1e2;
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+.TimesLost {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  display: grid;
+  justify-content: center;
+  margin-top: 5%;
+  color: #cc5858;
+  opacity: 0.7;
+  font-size: 20px;
+}
   
   #status {
     font-family: Gill Sans;
     text-shadow: 1px 1px 2px rgba(10, 10, 10, 1);
+    grid-column-start: 5;
+    grid-row-start: 1;
+    display: grid;
+    justify-content: center;
     color: #55acee;
     position: relative;
     opacity: 0.7;
@@ -168,6 +209,8 @@ html {
   .blue {
     background-color: #55acee;
     box-shadow: 0px 5px 0px 0px #3C93D5;
+    grid-column-start: 4;
+    grid-row-start: 2;
   }
   
   .blue:hover {
@@ -177,6 +220,8 @@ html {
   .green {
     background-color: #2ecc71;
     box-shadow: 0px 5px 0px 0px #15B358;
+    grid-column-start: 5;
+    grid-row-start: 2;
   }
   
   .green:hover {
@@ -186,6 +231,8 @@ html {
   .red {
     background-color: #e74c3c;
     box-shadow: 0px 5px 0px 0px #CE3323;
+    grid-column-start: 6;
+    grid-row-start: 2;
   }
   
   .red:hover {
@@ -296,10 +343,10 @@ table {
      display: inline-block;
      text-decoration: none;
      background-color:#127e12;
-     padding: 1.12vmax;
+     padding: 1.5vh;
      border-bottom-right-radius: 10px;
      border-bottom-left-radius: 10px;
-     margin-right: 1vmax;
+     margin-right: 0.4rem;
      font-size: 1.2vmax;
  }
  a:hover {

@@ -1,3 +1,12 @@
+let Money = 100;
+let TimesWon = 0;
+let TimesLost = 0; 
+
+let MoneyText = document.querySelector(".Money");
+let TimesWonText = document.querySelector(".TimesWon")
+let TimesLostText = document.querySelector(".TimesLost")
+
+
 var BlackjackJS = (function() {
 
 	function Card(rank, suit){
@@ -106,6 +115,10 @@ var BlackjackJS = (function() {
 
 			if(this.player.getScore() > 21){
 				this.gameEnded('You lost!');
+				Money *= 0.5;
+				TimesLost += 1;
+				MoneyText.innerHTML = `Money: ${Money} $`; 
+				TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
 			}
 		}
 
@@ -125,15 +138,27 @@ var BlackjackJS = (function() {
 
 				if(dealerBlackjack && !playerBlackjack) {
 						this.gameEnded('You lost!');
+						Money *= 0.5;
+						TimesLost += 1;
+						MoneyText.innerHTML = `Money: ${Money} $`; 
+						TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
 						break;
 				} else if(dealerBlackjack && playerBlackjack) {
 						this.gameEnded('Draw!');
 						break;
 				} else if(this.dealer.getScore() > 21 && this.player.getScore() <= 21) {
 						this.gameEnded('You won!');
+						Money *= 4;
+						TimesWon += 1;
+						MoneyText.innerHTML = `Money: ${Money} $`; 
+						TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
 						break;
 				} else if(this.dealer.getScore() > this.player.getScore() && this.dealer.getScore() <= 21 && this.player.getScore() < 21) {
 						this.gameEnded('You lost!');
+						Money *= 0.5;
+						TimesLost += 1;
+						MoneyText.innerHTML = `Money: ${Money} $`; 
+						TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
 						break;
 				}
 			}

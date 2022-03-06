@@ -106,13 +106,11 @@ button{
     margin: 5px;
 }
 
+.Even,
+.odd,
 .Money,
 .TimesWon,
-.TimesLost,
-.Amount,
-.Odd,
-.Even,
-.Zero  {
+.TimesLost {
     margin-top: 1.5rem;
 }
 
@@ -178,10 +176,10 @@ nav {
      display: inline-block;
      text-decoration: none;
      background-color:#3c93e4;
-     padding: 1.12vmax;
+     padding: 1.5vh;
      border-bottom-right-radius: 10px;
      border-bottom-left-radius: 10px;
-     margin-right: 1vmax;
+     margin-right: 0.4rem;
      font-size: 1.2vmax;
  }
  a:hover {

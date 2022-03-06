@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-image: url("Extra/OrangeSky.jpg");
+  background-image: url("Extra/Matrix.gif");
 }
 
 @font-face {
@@ -33,8 +33,8 @@
   margin: 5rem;
   opacity: 0;
   font-size: 10vmin;
-  background: linear-gradient(45deg, rgb(80, 79, 79), rgb(102, 38, 38), rgb(209, 139, 139));
-  text-shadow: 0 0 3px #ff00003b, 0 0 5px #96969677;
+  background: linear-gradient(45deg, rgb(14, 87, 0), rgb(2, 226, 13), rgb(20, 54, 31));
+  text-shadow: 0 0 3px #00ff153b, 0 0 5px #1caa0077;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: Japanese;
@@ -45,7 +45,7 @@ nav {
   background: none;
   display: grid;
   grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-  grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+  grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
   gap: 10px;
 }
 
@@ -164,6 +164,29 @@ a {
 }
 
 .Dice:hover {
+  color: rgb(255, 255, 255);
+  background-color: #a01414;
+}
+
+.Music {
+  opacity: 0;
+  grid-column-start: 3;
+  grid-row-start: 6;
+  background: none;
+  color: rgb(252, 252, 252);
+  display: inline-block;
+  background-color:#127e12;
+  padding: 1.12vmax;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px ;
+  border-top-right-radius: 10px ;
+  font-size: 1vmax;
+  animation: fadeIn 1.5s linear forwards;
+  animation-delay: 10s;
+}
+
+.Music:hover {
   color: rgb(255, 255, 255);
   background-color: #a01414;
 }
